@@ -1,0 +1,26 @@
+'use strict';
+
+/**
+ * @ngdoc directive
+ * @name App.directive:item
+ * @description
+ * # item
+ */
+angular.module('App')
+  .directive('item', function () {
+    return {
+      restrict: 'E',
+        compile: function () {
+            console.log("item compile");
+
+            return {
+                pre: function postLink(scope, element, attrs) {
+                    console.log("item pre link");
+                },
+                post: function postLink(scope, element, attrs) {
+                    console.log("item post link");
+                }
+            };
+        }
+    };
+  });

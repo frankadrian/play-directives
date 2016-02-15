@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "heading": "HTML5 Boilerplate",
+      "text": "HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites."
+    },
+    {
+      "heading": "Angular",
+      "text": "AngularJS is a toolset for building the framework most suited to your application development."
+    },
+    {
+      "heading": "Karma",
+      "text": "Spectacular Test Runner for JavaScript."
+    }
+  ]
+}
+
