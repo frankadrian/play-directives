@@ -9,10 +9,13 @@
 angular.module('App')
     .directive('itemBody', function () {
         return {
+            restrict: 'E',
             replace: true,
             transclude: true,
             templateUrl: 'scripts/directives/views/item-body.html',
-            restrict: 'E',
+            controller: function () {
+                console.log("itemBody controller");
+            },
             compile: function () {
                 console.log("itemBody compile");
 

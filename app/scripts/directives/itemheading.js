@@ -9,10 +9,13 @@
 angular.module('App')
     .directive('itemHeading', function () {
         return {
-            transclude:true,
-            replace: true,
-            templateUrl: 'scripts/directives/views/item-heading.html',
             restrict: 'E',
+            replace: true,
+            transclude:true,
+            templateUrl: 'scripts/directives/views/item-heading.html',
+            controller: function () {
+                console.log("itemHeading controller");
+            },
             compile: function () {
                 console.log("itemHeading compile");
 
