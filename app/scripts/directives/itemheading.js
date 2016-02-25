@@ -11,7 +11,7 @@ angular.module('App')
         return {
             restrict: 'E',
             replace: true,
-            transclude:true,
+            transclude: true,
             templateUrl: 'scripts/directives/views/item-heading.html',
             controller: function () {
                 console.log("itemHeading controller");
