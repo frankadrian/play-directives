@@ -2,29 +2,26 @@
 
 /**
  * @ngdoc directive
- * @name App.directive:itemBody
+ * @name App.directive.item:item
  * @description
- * # itemBody
+ * # item
  */
 angular.module('App')
-    .directive('itemBody', function () {
+    .directive('item', function () {
         return {
             restrict: 'E',
-            replace: true,
-            transclude: true,
-            templateUrl: 'scripts/directives/views/item-body.html',
             controller: function () {
-                console.log("itemBody controller");
+                console.log("item controller");
             },
             compile: function () {
-                console.log("itemBody compile");
+                console.log("item compile");
 
                 return {
                     pre: function postLink(scope, element, attrs) {
-                        console.log("itemBody pre link");
+                        console.log("item pre link");
                     },
                     post: function postLink(scope, element, attrs) {
-                        console.log("itemBody post link");
+                        console.log("item post link");
                     }
                 };
             }

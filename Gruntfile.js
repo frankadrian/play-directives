@@ -38,7 +38,12 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: [
+          '<%= yeoman.app %>/scripts/controllers/{,*/}*.js',
+          '<%= yeoman.app %>/scripts/directives/{,*/}*.js',
+          '<%= yeoman.app %>/scripts/services/{,*/}*.js',
+          '<%= yeoman.app %>/scripts/{,*/}*.js'
+        ],
         tasks: ['newer:jshint:all', 'newer:jscs:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -290,7 +295,7 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-      js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
+      js: ['<%= yeoman.dist %>/scripts/**/*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
@@ -376,7 +381,7 @@ module.exports = function (grunt) {
           usemin: 'scripts/scripts.js'
         },
         cwd: '<%= yeoman.app %>',
-        src: 'views/{,*/}*.html',
+        src: ['views/{,*/}*.html','scripts/**/*.html'],
         dest: '.tmp/templateCache.js'
       }
     },
@@ -412,6 +417,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            'data.json',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
