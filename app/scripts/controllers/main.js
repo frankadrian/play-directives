@@ -15,6 +15,7 @@ angular.module('App')
             'Karma'
         ];
 
+        $scope.urls = ['https://www.facebook.com/20531316728/posts/10154009990506729/'];
         $scope.items = items.data.items;
     });
 
