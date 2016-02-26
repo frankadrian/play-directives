@@ -15,9 +15,17 @@ angular
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'fc.facebook'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, FacebookConfigProvider) {
+
+        FacebookConfigProvider.setVersion('v2.5');
+        FacebookConfigProvider.setStatus(false);
+        FacebookConfigProvider.setCookie(false);
+        FacebookConfigProvider.setXfbm(false);
+
+
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',

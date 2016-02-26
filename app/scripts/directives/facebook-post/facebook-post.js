@@ -6,8 +6,8 @@
  * @description
  * # facebookPost
  */
-angular.module('App')
-    .directive('facebookPost', function () {
+angular.module('fc.facebook')
+    .directive('facebookPost', function ($timeout, FacebookService) {
         return {
             restrict: 'E',
             replace: true,
@@ -24,6 +24,10 @@ angular.module('App')
                     },
                     post: function postLink(scope, element, attrs) {
                         console.log("facebookPost post link");
+                        //parse the dom for new elements
+                        $timeout(function () {
+                            FacebookService.parse();
+                        })
                     }
                 };
             }
