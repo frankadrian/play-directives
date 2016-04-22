@@ -15,6 +15,6 @@ angular.module('App')
             'Karma'
         ];
 
-        $scope.items = items.data.items;
+        $scope.items = items;
     });
 
